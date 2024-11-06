@@ -1,7 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import { Image } from "@unpic/qwik";
 
-const coverImage = "https://images.unsplash.com/photo-1590767950092-42b8362368da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3087&q=80";
+const coverImage = "/src/assets/images/mp.jpg";
 
 export default component$(() => {
   return (
@@ -49,8 +49,8 @@ export default component$(() => {
             <Image
               src={coverImage}
               layout="constrained"
-              width={430}
-              height={645}
+              width={500}
+              height={500}
               alt="Qwind Hero Image (Cool dog)"
               class="mx-auto lg:mr-0 w-full drop-shadow-2xl rounded-md"
               priority={true}
