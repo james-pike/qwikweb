@@ -1,7 +1,6 @@
 import { component$ } from "@builder.io/qwik";
-import { Image } from "@unpic/qwik";
 
-const coverImage = "/images/mp.jpg";
+import Image from '~/assets/images/mp.jpg?w=400&h=400&jsx';
 
 export default component$(() => {
   return (
@@ -46,7 +45,7 @@ export default component$(() => {
             </div>
           </div>
           <div class="basis-1/2">
-            <Image
+            {/* <Image
               src={coverImage}
               layout="constrained"
               width={500}
@@ -55,7 +54,9 @@ export default component$(() => {
               class="mx-auto lg:mr-0 w-full drop-shadow-2xl rounded-md"
               priority={true}
               breakpoints={[320, 480, 640, 768, 1024]}
-            />
+            /> */}
+
+            <Image loading="lazy"/>
           </div>
         </div>
       </div>
