@@ -1,9 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { Image } from "@unpic/qwik";
 
-const coverImage =
-  "https://qwikweb-pwgoagra2-jamespikes-projects.vercel.app/images/hero.jpg";
-
 export default component$(() => {
   return (
     <section class="relative md:-mt-[76px] not-prose bg-gradient-to-r from-primary-200 to-secondary-300">
@@ -48,7 +45,7 @@ export default component$(() => {
           </div>
           <div class="basis-1/2">
             <Image
-              src={coverImage}
+              src="https://qwikweb-pwgoagra2-jamespikes-projects.vercel.app/images/hero.jpg"
               layout="constrained"
               width={493}
               height={616}
