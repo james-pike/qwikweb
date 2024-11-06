@@ -1,7 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { Image } from "@unpic/qwik";
 
-import coverImage from '/images/hero.jpg'; 
 
 export default component$(() => {
   return (
@@ -47,7 +46,7 @@ export default component$(() => {
           </div>
           <div class="basis-1/2">
             <Image
-              src={coverImage}
+              src="/images/hero.jpg"
               layout="constrained"
               width={493}
               height={616}
