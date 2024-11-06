@@ -2,7 +2,7 @@ import { component$ } from "@builder.io/qwik";
 import { Image } from "@unpic/qwik";
 
 const coverImage =
-  "https://qwikweb.vercel.app/images/hero.jpg";
+  "https://qwikweb-pwgoagra2-jamespikes-projects.vercel.app/images/hero.jpg";
 
 export default component$(() => {
   return (
