@@ -12,7 +12,7 @@ export default component$(() => {
         <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
         <div class="py-12 md:py-20 lg:py-0 lg:flex lg:items-center lg:h-screen lg:gap-8">
           <div class="basis-1/2 text-center lg:text-left pb-10 md:pb-16 mx-auto">
-            <h1 class="text-6xl font-serif md:text-7xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
+            <h1 class="text-5xl font-serif md:text-7xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
               <span class="block">Experienced</span>
               <span class="block">Family Lawyer</span>
               <span class="block">in Toronto</span>
@@ -20,11 +20,10 @@ export default component$(() => {
             <div class="max-w-3xl mx-auto lg:max-w-none">
               <p class="text-xl text-muted mb-6 dark:text-slate-300">
                 <span class="font-semibold underline decoration-wavy decoration-1 decoration-secondary-600 underline-offset-2">
-                  Qwind
+                  Comprehensive Legal Support
                 </span>{" "}
-                is a production ready template to start your new website using <em>Qwik</em> + <em>Tailwind CSS</em>. It
-                has been designed following Best Practices, SEO, Accessibility,{" "}
-                <span class="inline md:hidden">...</span>
+                specializing in Divorce, Child Custody, Spousal Support, Property Division, Adoption, Mediation and more.{" "}
+                
                 <span class="hidden md:inline">
                   Dark Mode, Great Page Speed, image optimization, sitemap generation and more.
                 </span>
@@ -33,12 +32,12 @@ export default component$(() => {
               <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 lg:justify-start lg:m-0 lg:max-w-7xl">
                 <div class="flex w-full sm:w-auto">
                   <a
-                    class="btn btn-primary bg-primary-500 sm:mb-0 w-full"
+                    class="btn btn-primary  sm:mb-0 w-full"
                     href="https://github.com/onwidget/qwind"
                     target="_blank"
                     rel="noopener"
                   >
-                    Get template
+                    Schedule A Free Consultation
                   </a>
                 </div>
                 <div class="flex w-full sm:w-auto">
