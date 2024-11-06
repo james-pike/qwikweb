@@ -49,8 +49,8 @@ export default component$(() => {
             <Image
               src={coverImage}
               layout="constrained"
-              width={493}
-              height={616}
+              width={93}
+              height={16}
               alt="Qwind Hero Image (Cool dog)"
               class="mx-auto lg:mr-0 w-full drop-shadow-2xl rounded-md"
               priority={true}
