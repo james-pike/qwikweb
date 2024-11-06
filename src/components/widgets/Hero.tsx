@@ -1,6 +1,8 @@
 import { component$ } from "@builder.io/qwik";
 import { Image } from "@unpic/qwik";
 
+import coverImage from '/images/hero.jpg'; 
+
 export default component$(() => {
   return (
     <section class="relative md:-mt-[76px] not-prose bg-gradient-to-r from-primary-200 to-secondary-300">
@@ -45,7 +47,7 @@ export default component$(() => {
           </div>
           <div class="basis-1/2">
             <Image
-              src="/images/hero.jpg"
+              src={coverImage}
               layout="constrained"
               width={493}
               height={616}
