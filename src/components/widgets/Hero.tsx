@@ -49,8 +49,8 @@ export default component$(() => {
             <Image
               src={heroImage}  // Use the imported local image
               layout="constrained"
-              width={493}
-              height={616}
+              width={1000}
+              height={1250}
               alt="Hero Image"
               class="mx-auto lg:mr-0 w-full drop-shadow-2xl rounded-md"
               priority={true}
