@@ -1,8 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { Image } from "@unpic/qwik";
-
-const coverImage =
-  "https://images.unsplash.com/photo-1590767950092-42b8362368da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3087&q=80";
+import heroImage from '~/assets/images/hero.jpg';  // Import the local image
 
 export default component$(() => {
   return (
@@ -49,11 +47,11 @@ export default component$(() => {
           </div>
           <div class="basis-1/2">
             <Image
-              src={coverImage}
+              src={heroImage}  // Use the imported local image
               layout="constrained"
               width={493}
               height={616}
-              alt="Qwind Hero Image (Cool dog)"
+              alt="Hero Image"
               class="mx-auto lg:mr-0 w-full drop-shadow-2xl rounded-md"
               priority={true}
               breakpoints={[320, 480, 640, 768, 1024]}
