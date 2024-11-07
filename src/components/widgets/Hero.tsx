@@ -19,7 +19,7 @@ export default component$(() => {
       </div>
       
       {/* Hero Section Content */}
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 z-10">
+      <div class="relative max-w-7xl mx-auto px-0 sm:px-6 z-10">
         <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
         <div class="py-12 md:py-20 lg:py-0 lg:flex lg:items-center lg:h-[85vh] lg:gap-8">
           
