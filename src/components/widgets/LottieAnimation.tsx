@@ -1,5 +1,5 @@
-import { component$, useVisibleTask$, useSignal } from "@builder.io/qwik";
-import lottie, { AnimationItem } from "lottie-web";
+import { component$, useTask$, useSignal } from "@builder.io/qwik";
+import lottie, { type AnimationItem } from "lottie-web";
 
 interface LottieAnimationProps {
   animationData: string; // Path to your Lottie JSON file
@@ -9,27 +9,32 @@ interface LottieAnimationProps {
 
 export default component$((props: LottieAnimationProps) => {
   const containerRef = useSignal<Element | undefined>(undefined);
-  const animation = useSignal<AnimationItem | undefined>(undefined);
+  const animation = useSignal<AnimationItem | null>(null);
 
-  useVisibleTask$(() => {
+  useTask$(({ track }) => {
+    track(() => containerRef.value);
     if (containerRef.value instanceof HTMLDivElement) {
       animation.value = lottie.loadAnimation({
-        container: containerRef.value, // the HTML element to render the animation in
+        container: containerRef.value,
         renderer: "svg",
         loop: props.loop ?? true,
         autoplay: props.autoplay ?? true,
-        path: props.animationData, // path to the Lottie JSON data file
+        path: props.animationData,
       });
+
+      // Destroy the animation when the component is unmounted
+      return () => {
+        animation.value?.destroy();
+      };
     }
   });
-
 
 
   return (
     <div>
       <div ref={containerRef} class="w-full h-full"></div>
       <div class="mt-4 flex space-x-2">
-    
+      
       </div>
     </div>
   );
