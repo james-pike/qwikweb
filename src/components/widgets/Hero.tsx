@@ -1,12 +1,12 @@
 import { component$, } from "@builder.io/qwik";
 
-const coverImage = '~/assets/images/mp.jpg?w=400&h=400&jsx';
+// const coverImage = '~/assets/images/mp.jpg?w=400&h=400&jsx';
 
 export default component$(() => {
   return (
     <section class="relative md:-mt-[76px] not-prose bg-gradient-to-r from-primary-200 to-secondary-300">
       <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
-        <div className="absolute inset-4 rounded-4xl bg-white/80" />
+        <div class="absolute inset-4 rounded-4xl bg-white/80" />
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
 
         <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
