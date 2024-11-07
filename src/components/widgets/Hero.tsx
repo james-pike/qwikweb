@@ -5,12 +5,12 @@ import { component$, } from "@builder.io/qwik";
 export default component$(() => {
   return (
     <section class="relative md:-mt-[76px] not-prose bg-gradient-to-r from-primary-200 to-secondary-300">
-      <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
-        <div class="absolute inset-4 rounded-4xl bg-white/80" />
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="absolute pointer-events-none" aria-hidden="true"></div>
+        {/* removed px-4 to make ring-inset effect*/}
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 border-8 ">
 
-        <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
-        <div class="py-12 md:py-20 lg:py-0 lg:flex lg:items-center lg:h-screen lg:gap-8">
+        <div class="pt-0 md:pt-[50px] pointer-events-none "></div>
+        <div class="py-12 md:py-20 lg:py-0 lg:flex lg:items-center lg:h-screen lg:gap-8 border-red">
           <div class="basis-1/2 text-center lg:text-left pb-10 md:pb-16 mx-auto">
             <h1 class="text-5xl font-serif md:text-7xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
               <span class="block">Experienced</span>
