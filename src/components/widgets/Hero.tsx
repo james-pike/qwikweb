@@ -1,8 +1,8 @@
 import { component$ } from "@builder.io/qwik";
-import { Image } from "@unpic/qwik";
+// import { Image } from "@unpic/qwik";
 import LottieAnimation from "./LottieAnimation";
 
-const coverImage = "https://qwikweb.vercel.app/images/mp.jpg";
+// const coverImage = "https://qwikweb.vercel.app/images/mp.jpg";
 
 export default component$(() => {
   return (

@@ -23,17 +23,13 @@ export default component$((props: LottieAnimationProps) => {
     }
   });
 
-  const playAnimation = $(() => animation.value?.play());
-  const pauseAnimation = $(() => animation.value?.pause());
-  const stopAnimation = $(() => animation.value?.stop());
+
 
   return (
     <div>
       <div ref={containerRef} class="w-full h-full"></div>
       <div class="mt-4 flex space-x-2">
-        <button onClick$={playAnimation}>Play</button>
-        <button onClick$={pauseAnimation}>Pause</button>
-        <button onClick$={stopAnimation}>Stop</button>
+    
       </div>
     </div>
   );
