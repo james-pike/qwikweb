@@ -46,13 +46,7 @@ export default component$(() => {
             </div>
           </div>
           <div class="basis-1/2">
-            <div class="hidden lg:block">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2FQm9k8y3Z8jvw0SRd2v3t%2Fb7b5a7c5b5b64e5a9b3f8c1b3e9b3b5"
-                alt="Family Lawyer in Toronto"
-                class="object-cover object-center w-full h-full rounded-md shadow-lg"
-              />
-            </div>
+          <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script> 
 
           <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script><dotlottie-player src="https://lottie.host/75cd1350-b4e9-467d-ac26-90d6ddf2f412/yhqSt5G4IC.json" background="transparent" speed="0.5" style="width: 300px; height: 300px" direction="1" playMode="normal" autoplay></dotlottie-player>          </div>
         </div>
