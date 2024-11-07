@@ -1,5 +1,5 @@
-import { component$, useVisibleTask$, useSignal } from "@builder.io/qwik";
-import lottie, { type AnimationItem } from "lottie-web";
+import { component$, useSignal, useOnWindow, noSerialize, $ } from "@builder.io/qwik";
+import lottie, { AnimationItem } from "lottie-web";
 
 interface LottieAnimationProps {
   animationData: string; // Path to your Lottie JSON file
@@ -9,34 +9,28 @@ interface LottieAnimationProps {
 
 export default component$((props: LottieAnimationProps) => {
   const containerRef = useSignal<Element | undefined>(undefined);
-  const animation = useSignal<AnimationItem | null>(null);
 
-  // Using useVisibleTask$ to ensure this code only runs on the client
-  useVisibleTask$(() => {
-    if (containerRef.value instanceof HTMLDivElement) {
-      animation.value = lottie.loadAnimation({
-        container: containerRef.value,
-        renderer: "svg",
-        loop: props.loop ?? true,
-        autoplay: props.autoplay ?? true,
-        path: props.animationData,
-      });
+  // Correctly applying noSerialize() to AnimationItem signal
+  const animationInstance = useSignal<AnimationItem | undefined>(undefined);
 
-      // Destroy the animation when the component is unmounted
-      return () => {
-        animation.value?.destroy();
-      };
+  useOnWindow("load", $(() => {
+    if (containerRef.value instanceof HTMLDivElement && !animationInstance.value) {
+      // Load the animation and mark it as non-serializable
+      animationInstance.value = noSerialize(
+        lottie.loadAnimation({
+          container: containerRef.value,
+          renderer: "svg",
+          loop: props.loop ?? true,
+          autoplay: props.autoplay ?? true,
+          path: props.animationData, // Path to your Lottie JSON data
+        })
+      );
     }
-  });
-
- 
+  }));
 
   return (
     <div>
       <div ref={containerRef} class="w-full h-full"></div>
-      <div class="mt-4 flex space-x-2">
-       
-      </div>
     </div>
   );
 });
