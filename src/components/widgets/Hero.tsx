@@ -5,7 +5,7 @@ const coverImage = "https://qwikweb.vercel.app/images/mp.jpg";
 
 export default component$(() => {
   return (
-    <section class="relative min-h-[85vh] border-4 md:-mt-[76px] not-prose bg-gradient-to-r from-primary-200 to-secondary-300">
+    <section class="relative min-h-[85vh] md:-mt-[76px] not-prose bg-gradient-to-r from-primary-100 to-secondary-100">
       <div class="absolute pointer-events-none" aria-hidden="true"></div>
       {/* removed px-4 to make ring-inset effect */}
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
