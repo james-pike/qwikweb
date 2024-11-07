@@ -1,4 +1,4 @@
-import { component$, useSignal, useOnWindow, noSerialize, $ } from "@builder.io/qwik";
+import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
 import lottie, { AnimationItem } from "lottie-web";
 
 interface LottieAnimationProps {
@@ -8,25 +8,24 @@ interface LottieAnimationProps {
 }
 
 export default component$((props: LottieAnimationProps) => {
+  // Change from 'Element | null' to 'Element | undefined'
   const containerRef = useSignal<Element | undefined>(undefined);
 
-  // Correctly applying noSerialize() to AnimationItem signal
-  const animationInstance = useSignal<AnimationItem | undefined>(undefined);
+  // Signal to store the animation instance
+  const animationInstance = useSignal<AnimationItem | null>(null);
 
-  useOnWindow("load", $(() => {
-    if (containerRef.value instanceof HTMLDivElement && !animationInstance.value) {
-      // Load the animation and mark it as non-serializable
-      animationInstance.value = noSerialize(
-        lottie.loadAnimation({
-          container: containerRef.value,
-          renderer: "svg",
-          loop: props.loop ?? true,
-          autoplay: props.autoplay ?? true,
-          path: props.animationData, // Path to your Lottie JSON data
-        })
-      );
+  // Initialize Lottie animation once the container is available
+  useVisibleTask$(() => {
+    if (containerRef.value && !animationInstance.value) {
+      animationInstance.value = lottie.loadAnimation({
+        container: containerRef.value, 
+        renderer: "svg",
+        loop: props.loop ?? true,
+        autoplay: props.autoplay ?? true,
+        path: props.animationData,
+      });
     }
-  }));
+  });
 
   return (
     <div>
