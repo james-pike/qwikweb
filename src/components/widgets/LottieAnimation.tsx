@@ -1,4 +1,4 @@
-import { component$, useVisibleTask$, useSignal, $ } from "@builder.io/qwik";
+import { component$, useVisibleTask$, useSignal } from "@builder.io/qwik";
 import lottie, { AnimationItem } from "lottie-web";
 
 interface LottieAnimationProps {
