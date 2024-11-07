@@ -6,34 +6,34 @@ export default component$(() => {
       <div class="grid grid-cols-2 row-gap-8 md:grid-cols-4">
         <div class="text-center md:border-r dark:md:border-slate-500 mb-10 md:mb-0">
           <div class="text-4xl font-bold lg:text-5xl xl:text-6xl text-[#039de1] font-heading">
-            132K
+            200+
           </div>
           <p class="text-sm font-medium tracking-widest text-gray-800 dark:text-slate-400 uppercase lg:text-base">
-            Downloads
+            Cases Handled
           </p>
         </div>
         <div class="text-center md:border-r dark:md:border-slate-500 mb-10 md:mb-0">
           <div class="text-4xl font-bold lg:text-5xl xl:text-6xl text-[#039de1] font-heading">
-            24.8K
+            98%
           </div>
           <p class="text-sm font-medium tracking-widest text-gray-800 dark:text-slate-400 uppercase lg:text-base">
-            Stars
+            Client Satisfaction
           </p>
         </div>
         <div class="text-center md:border-r dark:md:border-slate-500 font-heading">
           <div class="text-4xl font-bold lg:text-5xl xl:text-6xl text-[#039de1]">
-            10.3K
+            10+
           </div>
           <p class="text-sm font-medium tracking-widest text-gray-800 dark:text-slate-400 uppercase lg:text-base">
-            Forks
+            Years of Experience
           </p>
         </div>
         <div class="text-center">
           <div class="text-4xl font-bold lg:text-5xl xl:text-6xl text-[#039de1] font-heading">
-            48.4K
+            24/7
           </div>
           <p class="text-sm font-medium tracking-widest text-gray-800 dark:text-slate-400 uppercase lg:text-base">
-            Users
+            Support Availability
           </p>
         </div>
       </div>
