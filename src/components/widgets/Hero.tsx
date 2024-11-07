@@ -1,17 +1,29 @@
 import { component$ } from '@builder.io/qwik';
 
-// Static import if the file is included in your build
-
-
 export default component$(() => {
- 
-
   return (
     <section class="relative min-h-[85vh] md:-mt-[76px] not-prose bg-gradient-to-r from-primary-100 to-secondary-100">
-      <div class="absolute pointer-events-none" aria-hidden="true"></div>
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
-        <div class="pt-0 md:pt-[76px] pointer-events-none "></div>
+      
+      {/* Background Lottie Animation - Only on Mobile */}
+      <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-0 md:hidden" aria-hidden="true">
+        <dotlottie-player
+          src="https://lottie.host/f401db68-5f9c-45f3-9740-822266addeff/9dTNPA28ub.json"
+          background="transparent"
+          speed="1"
+          style="width: 100%; height: 100%;"
+          direction="1"
+          playMode="normal"
+          loop
+          autoplay
+        ></dotlottie-player>
+      </div>
+      
+      {/* Hero Section Content */}
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 z-10">
+        <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
         <div class="py-12 md:py-20 lg:py-0 lg:flex lg:items-center lg:h-[85vh] lg:gap-8">
+          
+          {/* Text Section */}
           <div class="basis-1/2 text-center lg:text-left pb-10 md:pb-16 mx-auto">
             <h1 class="text-5xl font-serif md:text-7xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
               <span class="block">Experienced</span>
@@ -23,9 +35,9 @@ export default component$(() => {
                 <span class="font-semibold underline decoration-wavy decoration-1 decoration-secondary-600 underline-offset-2">
                   Comprehensive Legal Support
                 </span>{" "}
-                specializing in Divorce, Child Custody, Spousal Support, Property Division, Adoption, Mediation and more.{" "}
+                specializing in Divorce, Child Custody, Spousal Support, Property Division, Adoption, Mediation, and more.{" "}
                 <span class="hidden md:inline">
-                  Dark Mode, Great Page Speed, image optimization, sitemap generation and more.
+                  Dark Mode, Great Page Speed, image optimization, sitemap generation, and more.
                 </span>
               </p>
               <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4 lg:justify-start lg:m-0 lg:max-w-7xl">
@@ -45,10 +57,13 @@ export default component$(() => {
               </div>
             </div>
           </div>
-          <div class="basis-1/2">
-          <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script> 
 
-          <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script><dotlottie-player src="https://lottie.host/75cd1350-b4e9-467d-ac26-90d6ddf2f412/yhqSt5G4IC.json" background="transparent" speed="0.5" style="width: 300px; height: 300px" direction="1" playMode="normal" autoplay></dotlottie-player>          </div>
+          {/* Placeholder for Additional Content (Optional) */}
+          <div class="basis-1/2 flex justify-center items-center">
+            {/* You can add other elements here if desired */}
+           
+          </div>
+          
         </div>
       </div>
     </section>
