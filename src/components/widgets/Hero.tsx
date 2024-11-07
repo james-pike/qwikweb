@@ -1,16 +1,10 @@
 import { component$ } from '@builder.io/qwik';
-import { QwikLottie } from 'qwik-lottie';
-import { Options } from './types';
 
 // Static import if the file is included in your build
-import animationData from 'public/animations/bluestars.json';
+
 
 export default component$(() => {
-  const options: Options = {
-    loop: true,
-    autoplay: true,
-    animationData,  // Use the statically imported JSON data
-  };
+ 
 
   return (
     <section class="relative min-h-[85vh] md:-mt-[76px] not-prose bg-gradient-to-r from-primary-100 to-secondary-100">
@@ -52,7 +46,7 @@ export default component$(() => {
             </div>
           </div>
           <div class="basis-1/2">
-          <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script><dotlottie-player src="https://lottie.host/fe0873a0-ab53-482e-b136-941d01a9ae1c/N5g5h1cMVf.json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" playMode="normal" autoplay hover></dotlottie-player>
+          <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script><dotlottie-player src="https://lottie.host/75cd1350-b4e9-467d-ac26-90d6ddf2f412/yhqSt5G4IC.json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" playMode="normal" autoplay hover></dotlottie-player>
           </div>
         </div>
       </div>
