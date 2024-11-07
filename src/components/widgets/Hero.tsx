@@ -46,7 +46,9 @@ export default component$(() => {
             </div>
           </div>
           <div class="basis-1/2">
-          <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script><dotlottie-player src="https://lottie.host/75cd1350-b4e9-467d-ac26-90d6ddf2f412/yhqSt5G4IC.json" background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" playMode="normal" autoplay hover></dotlottie-player>
+          <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script> 
+
+    <dotlottie-player src="https://lottie.host/75cd1350-b4e9-467d-ac26-90d6ddf2f412/yhqSt5G4IC.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
           </div>
         </div>
       </div>
